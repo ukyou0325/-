@@ -75,9 +75,13 @@ sudo dnf install -y git
 # 6-2. GitHubリポジトリをクローン
 git clone <GitHubリポジトリURL>
 
+# 6-3. エラーが出やすい名前なので変更
+mv - "好きな名前"
 
--- 7-1. MySQLにログイン
-mysql -u <ユーザー名> -p
+# 6-4. 変更した名前のディレクトリに移動
+
+-- 7-1. MySQLコンテナに入る
+docker compose exec mysql mysql example_db
 
 -- 7-2. 会員情報用テーブルを作成
 CREATE TABLE `users` (
